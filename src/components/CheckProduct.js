@@ -3,17 +3,18 @@ import '../styles/CheckoutProduct.css'
 import { useStateValue } from '../StateProvider'
 
 function CheckProduct({id, image, title, price, rating}) {
-    const [ dispatch ] = useStateValue();
+    // eslint-disable-next-line
+    const [{}, dispatch ] = useStateValue();
 
     const removeFromBasket = () => {
         //remove o item do carrinho
         dispatch({
             type: "REMOVE_FROM_BASKET",
-            id: id,
+            id: id
         })
     }
   return (
-    <div className='checkoutProduct'>
+    <div className='checkoutProduct' key={id}>
         <img className='checkoutProduct__image' src={image} alt=''
         />
         <div className="checkoutProduct__info">
