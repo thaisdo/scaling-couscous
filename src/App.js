@@ -7,6 +7,13 @@ import Checkout from "./components/Checkout";
 import Login from "./components/Login";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
+import Payment from "./components/Payment";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const promise = loadStripe(
+  'pk_test_51NLImwJmkAGlpg5GDIZyfwqZ4XNTwxiV1HQGkQpxMf8hTziyFTRdn73Wa5zO4PE2qqwDIhAKEoeYdC5ouVYQ7BAE00oWJJMx1d'
+);
 
 function App() {
   // eslint-disable-next-line
@@ -51,6 +58,17 @@ function App() {
               <React.Fragment>
                 <Header />
                 <Checkout />
+              </React.Fragment>
+            }
+          />
+          <Route
+            path="/payment"
+            element={
+              <React.Fragment>
+                <Header />
+                <Elements stripe={promise}>
+                  <Payment />
+                </Elements>
               </React.Fragment>
             }
           />
