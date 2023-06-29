@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/CheckoutProduct.css'
 import { useStateValue } from '../StateProvider'
 
-function CheckProduct({id, image, title, price, rating}) {
+function CheckoutProduct({id, image, title, price, rating}) {
     // eslint-disable-next-line
     const [{}, dispatch ] = useStateValue();
 
@@ -38,4 +38,4 @@ function CheckProduct({id, image, title, price, rating}) {
   )
 }
 
-export default CheckProduct
+export default CheckoutProduct;
