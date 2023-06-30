@@ -10,31 +10,30 @@ import { useStateValue } from "./StateProvider";
 import Payment from "./components/Payment";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import Orders from "./components/Orders";
 
-const promise = loadStripe(
-  'pk_test_51NLImwJmkAGlpg5GDIZyfwqZ4XNTwxiV1HQGkQpxMf8hTziyFTRdn73Wa5zO4PE2qqwDIhAKEoeYdC5ouVYQ7BAE00oWJJMx1d'
-);
+const promise = loadStripe("");
 
 function App() {
   // eslint-disable-next-line
   const [{}, dispatch] = useStateValue();
-  
+
   useEffect(() => {
     // vai rodar uma vez
-    auth.onAuthStateChanged(authUser => {
+    auth.onAuthStateChanged((authUser) => {
       console.log("USER IS = ", authUser);
 
       if (authUser) {
         // just logged in / was logged in
         dispatch({
           type: "SET_USER",
-          user: authUser
+          user: authUser,
         });
       } else {
         // user is logged out
         dispatch({
           type: "SET_USER",
-          user: null
+          user: null,
         });
       }
     });
@@ -78,6 +77,15 @@ function App() {
               <React.Fragment>
                 <Header />
                 <Home />
+              </React.Fragment>
+            }
+          />
+          <Route
+            path="/orders"
+            element={
+              <React.Fragment>
+                <Header />
+                <Orders />
               </React.Fragment>
             }
           />
