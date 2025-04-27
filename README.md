@@ -1,23 +1,57 @@
-# Projeto Integrado Frontend Web
-## scaling-couscous
+🛒 **Amazon Clone**  
+Project developed as part of the Integrative Project at the University.
 
-## <a name="About"></a>About the project
-In development... to be continued. :construction: :safety_vest:
+**About the Project**  
+This project is a functional clone of the Amazon website, developed independently using ReactJS.
 
-My project is a functional website that is a clone of the Amazon website, built entirely by me using ReactJS. The website includes a home page and a cart page, and I implemented a data layer using both Context API and Redux to manage the state of the application.
+---
+<div align="justify">
+    
+> My project is a functional website that is a clone of the Amazon website, built entirely by me using ReactJS. The website includes a home page and a cart page, and I implemented a data layer using both Context API and Redux to manage the state of the application. I've implemented a login page that will allow users to log in and create accounts. User authentication will be handled using Firebase, a popular backend service that provides authentication, database, and storage services. Once the login page is implemented, users will be able to create accounts, log in, and access their personal account information. Firebase will be used to validate user accounts and ensure that only authorized users are able to access certain features of the website. I'm proud to say that I completed this project entirely on my own, which is a testament to my skills and dedication to learning new technologies.
+</div>
 
-I'm currently in the process of implementing a login page that will allow users to log in and create accounts. User authentication will be handled using Firebase, a popular backend service that provides authentication, database, and storage services.
+---
 
-Once the login page is implemented, users will be able to create accounts, log in, and access their personal account information. Firebase will be used to validate user accounts and ensure that only authorized users are able to access certain features of the website.
+**Key features:**
+- Homepage with product listing
+- Shopping cart page
+- State management with Context API and Redux
+- User authentication with Firebase
 
-I'm proud to say that I completed this project entirely on my own, which is a testament to my skills and dedication to learning new technologies. 
+With the login implemented, users will be able to:
+- Create accounts
+- Access personal information of their accounts
+- Ensure secure access to restricted features
 
-## Look a bit
+**Technologies Used**
+- ReactJS
+- Redux and Context API
+- Firebase (Authentication)
+- Axios
+- Material UI (MUI)
+- Stripe API
+- HTML5 and CSS3
+
+## How to Run
+
+1. Clone the repository:
+```bash
+git clone https://github.com/thaisdo/seurepositorio.git
+```
+
+2. Install the dependencies:
+```bash
+npm install
+```
+
+3. Start the application:
+```bash
+npm start
+```
+
+> The application will be available at: http://localhost:3000
 
 ## <a name="Author"></a>Author :construction_worker:
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 <table>
     <tr>
         <td align="center">
